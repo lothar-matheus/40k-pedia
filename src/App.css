@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos gerais para o corpo */
+body {
+  background-image: url('../img/warnewwallnew.png');
+  margin: 0;
+  padding: 0;
+  font-family: '', sans-serif;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+/* Estilos para a div App */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilos para o cabeçalho */
+.hheaderIndex {
+  background-color: #2a2a2a; /* Fundo cinza escuro */
+  padding: 20px;
+  width: 100%; /* Largura total */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para um efeito de elevação */
+  border-bottom: 2px solid #8b0000; /* Borda vermelha escura na parte inferior */
+}
+
+.headerIndex h1 {
+  margin: 0;
+  color: #daa520; /* Texto em ouro */
+  font-family: 'Georgia', serif; /* Mudando a fonte para um estilo mais medieval */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  text-shadow: 2px 2px 4px #000000; /* Sombra no texto para um efeito mais imponente */
+}
+.intB{
+  background-color: #2a2a2a; /* Fundo cinza escuro */
+  padding: 20px;
+  width: 100%; /* Largura total */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para um efeito de elevação */
+  border-bottom: 2px solid #8b0000; /* Borda vermelha escura na parte inferior */
+  color:#daa520 ;
+}
+.buttonsIndex{
+  padding-top: 75%;
+  padding-right:510% ;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 300px;
+  margin-top: 20px 0;
+  
+}
+.buttonsIndex button{
+  width: 280px;
+  height: 50px;
+  background-color: transparent;
+  color: #FFFFFF;
+  
+}
+
+/* Estilos para o conteúdo principal */
+.mainContent {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContent p {
+  max-width: 800px; /* Limitar a largura do parágrafo para melhor legibilidade */
+  font-size: 1.2rem; /* Aumentar o tamanho da fonte para facilitar a leitura */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Estilos para o menu de navegação */
