@@ -28,7 +28,13 @@ function App() {
             </h1>
             <h1>
               <Link to="/jogos">
-                <button>JOGOS</button>
+                <button>JOGOS ELETRÔNICOS</button>
+              </Link>
+            </h1>
+
+            <h1>
+              <Link to="/jogos">
+                <button>JOGO DE TABULEIRO</button>
               </Link>
             </h1>
           </div>

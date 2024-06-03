@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 import spaceMarines from './cads/spaceMarines.jpg'
 import orks from './cads/orks.jpg'
@@ -34,6 +34,7 @@ const factionTexts = {
 function Fac() {
 
   const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const [currentAudioSource, setCurrentAudioSource] = useState(null);
   const audioBuffers = {};
 
   // Carregar buffers de áudio
@@ -61,21 +62,34 @@ function Fac() {
   const [selectedFaction, setSelectedFaction] = useState(null);
 
   const handleButtonClick = (faction) => {
+    // Parar a fonte de áudio atual
+    if (currentAudioSource) {
+      currentAudioSource.stop();
+    }
+  
     setSelectedFaction(faction);
-  if (audioBuffers[faction]) {
-    const source = audioContext.createBufferSource();
-    source.buffer = audioBuffers[faction];
-    source.connect(audioContext.destination);
-    source.start();
-  }
+    if (audioBuffers[faction]) {
+      const source = audioContext.createBufferSource();
+      source.buffer = audioBuffers[faction];
+      source.connect(audioContext.destination);
+      source.start();
+      setCurrentAudioSource(source);
+    }
   };
+  useEffect(() => {
+    return () => {
+      // Parar a fonte de áudio atual quando o componente for desmontado
+      if (currentAudioSource) {
+        currentAudioSource.stop();
+      }
+    };
+  }, [currentAudioSource]);
+
   return (
     <div className="AppAlter">
       
       <div>
-        <p>
-          No universo de Warhammer 40k, as facções são diversas e numerosas, cada uma com sua própria história, cultura e objetivos. Desde os super-humanos Space Marines até os nefastos Necrons e os misteriosos Eldar, cada facção oferece uma visão única do vasto e sombrio futuro onde a guerra é eterna.
-        </p>
+          <h2>Algumas das facções do universo 40k (Clique nas fotos para escutar o tema)</h2>
       </div>
       <div className='FacDetails'>
         <button onClick={() => handleButtonClick('Space Marines')}>
