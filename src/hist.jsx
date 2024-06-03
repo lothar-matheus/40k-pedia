@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+
 function Hist() {
   return (
     <div className="histoDiv">
@@ -18,6 +19,9 @@ function Hist() {
         <a href="https://www.youtube.com/watch?v=1s9TwrLU5pY&list=PLz8-M4i3vmdA2EZIGRD-XIHtgvZFY21Sj&index=8"target='_blank'> <button>O Jogo das Forças do Caos</button>
         </a>
 
+      </div>
+      <div className='divVideo'>
+          <video src="./video/war_video_mp4"></video>
       </div>
     </div>
   );

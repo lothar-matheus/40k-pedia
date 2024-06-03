@@ -1,10 +1,13 @@
 import React,{useState, useEffect} from 'react';
 import './App.css';
+
+//importação de imagens jpg
 import spaceMarines from './cads/spaceMarines.jpg'
 import orks from './cads/orks.jpg'
 import necrons from './cads/necrons.jpg'
 import eldar from './cads/eldar.jpg'
 
+//importação de arquivos mp3
 import spaceMarinesAudio from './msc/space_marines_music.mp3';
 import orksAudio from './msc/orks_music.mp3';
 import eldarAudio from './msc/eldar_music.mp3';
@@ -63,6 +66,7 @@ function Fac() {
 
   const handleButtonClick = (faction) => {
     // Parar a fonte de áudio atual
+    alert('Tocando música')
     if (currentAudioSource) {
       currentAudioSource.stop();
     }
@@ -88,8 +92,8 @@ function Fac() {
   return (
     <div className="AppAlter">
       
-      <div>
-          <h2>Algumas das facções do universo 40k (Clique nas fotos para escutar o tema)</h2>
+      <div className='divh2Fac' style={{ marginLeft: '20px' }}>
+          <h2>Algumas das facções (Clique nas fotos para escutar o tema)</h2>
       </div>
       <div className='FacDetails'>
         <button onClick={() => handleButtonClick('Space Marines')}>
