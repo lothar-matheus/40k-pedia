@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Assumindo que o CSS já tem os estilos necessários
+import './App.css';
 
 function Board() {
   return (

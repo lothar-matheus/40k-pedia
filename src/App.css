@@ -40,7 +40,7 @@ body {
 .headerIndex h1 {
   margin: 0;
   color: #daa520; /* Texto em ouro */
-  font-family: 'Georgia', serif; /* Mudando a fonte para um estilo mais medieval */
+  font-family: 'Georgia', serif; /* Fonte para um estilo mais medieval */
   letter-spacing: 2px; /* Espaçamento entre letras */
   text-shadow: 2px 2px 4px #000000; /* Sombra no texto para um efeito mais imponente */
 }
@@ -71,7 +71,7 @@ body {
   margin-bottom: 45px;
 }
 
-/* Estilos para o conteúdo principal */
+
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@ body {
 
 .mainContent p {
   max-width: 800px; /* Limitar a largura do parágrafo para melhor legibilidade */
-  font-size: 1.2rem; /* Aumentar o tamanho da fonte para facilitar a leitura */
+  font-size: 1.2rem; 
   line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
 }
 
@@ -95,12 +95,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 100px; /* Ajuste esse valor conforme necessário */
+  margin-top: 100px;
   color: #FFFFFF;
 }
 
 .AppAlter header h1 {
-  margin-bottom: 20px; /* Ajuste esse valor conforme necessário */
+  margin-bottom: 20px; 
 }
 
 
@@ -110,7 +110,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 5px; /* Reduzido o espaçamento entre os botões */
-  margin-top: 20px; /* Ajuste este valor para posicionar mais abaixo */
+  margin-top: 20px; 
 }
 
 .FacDetails button {
@@ -128,7 +128,7 @@ body {
   height: 120%;
   object-fit: cover; /* Mantém a proporção da imagem e cobre todo o botão */
   display: block;
-  border-radius: 2px; /* Opcional: arredonda os cantos das imagens */
+  border-radius: 2px;
 }
 
 
